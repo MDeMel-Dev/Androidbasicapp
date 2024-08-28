@@ -1,5 +1,6 @@
 package com.vu.androidbasicapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -12,6 +13,7 @@ import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("nit3213", "onCreate: ")
@@ -22,13 +24,14 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val nextScreenIntent = Intent(this, SecondScreenActivity::class.java)
 
         val text: TextView  = findViewById(R.id.textView)
         val firstButton: Button = findViewById(R.id.button)
         val secondButton: Button = findViewById(R.id.secondButton)
 
         firstButton.setOnClickListener {
-            Log.d("nit3213", "The first button was clicked ")
+            startActivity(nextScreenIntent)
         }
 
         secondButton.setOnClickListener {
