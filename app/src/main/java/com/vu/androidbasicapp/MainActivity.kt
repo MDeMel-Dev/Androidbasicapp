@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
 
         firstButton.setOnClickListener {
             Log.d("nit3213", "The first button was clicked ")
+        }
+
+        secondButton.setOnClickListener {
+            Snackbar.make(it, "You clicked on the second button", Snackbar.LENGTH_LONG).show()
         }
     }
 }
