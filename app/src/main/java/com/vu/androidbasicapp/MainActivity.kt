@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("nit3213", "onCreate: ")
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_alternative)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main_alternative)) { v, insets ->
@@ -33,5 +34,30 @@ class MainActivity : AppCompatActivity() {
         secondButton.setOnClickListener {
             Snackbar.make(it, "You clicked on the second button", Snackbar.LENGTH_LONG).show()
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("nit3213", "onStart: ")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("nit3213", "onResume: ")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("nit3213", "onPause: ")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("nit3213", "onStop: ")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("nit3213", "onDestroy: ")
     }
 }
