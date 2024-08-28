@@ -1,6 +1,7 @@
 package com.vu.androidbasicapp
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -18,6 +19,14 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val text: TextView  = findViewById(R.id.textView)
+        val firstButton: Button = findViewById(R.id.button)
+        val secondButton: Button = findViewById(R.id.secondButton)
+
+        firstButton.setOnClickListener {
+            Log.d("nit3213", "The first button was clicked ")
         }
     }
 }
