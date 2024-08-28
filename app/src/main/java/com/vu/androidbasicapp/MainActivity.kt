@@ -10,10 +10,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.snackbar.Snackbar
+import com.vu.androidbasicapp.model.Student
 
 const val DATA_KEY_MODULE_ID = "module-id"
+const val DATA_KEY_STUDENT_DETAILS = "student-details"
 class MainActivity : AppCompatActivity() {
 
+val studentDetail = Student("Thomas", 25)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +31,8 @@ class MainActivity : AppCompatActivity() {
 
         val nextScreenIntent = Intent(this, SecondScreenActivity::class.java)
         nextScreenIntent.putExtra(DATA_KEY_MODULE_ID, "nit3213")
+
+        nextScreenIntent.putExtra(DATA_KEY_STUDENT_DETAILS, studentDetail)
 
         val text: TextView  = findViewById(R.id.textView)
         val firstButton: Button = findViewById(R.id.button)
