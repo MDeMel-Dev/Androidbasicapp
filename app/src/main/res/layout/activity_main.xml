@@ -8,12 +8,30 @@
     tools:context=".MainActivity">
 
     <View
-        android:id="@+id/top_box"
+        android:id="@+id/red_square"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/blue_sqaure"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@android:color/holo_blue_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/red_square"
+        app:layout_constraintStart_toEndOf="@id/red_square"
+        app:layout_constraintTop_toTopOf="@id/red_square"
+        android:layout_marginStart="40dp"/>
+
+    <View
+        android:id="@+id/green_sqaure"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintEnd_toEndOf="@id/blue_sqaure"
+        app:layout_constraintStart_toStartOf="@id/blue_sqaure"
+        app:layout_constraintTop_toBottomOf="@id/blue_sqaure"
+        android:layout_marginTop="40dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
