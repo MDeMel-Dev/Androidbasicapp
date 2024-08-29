@@ -1,41 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/red_square"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@android:color/red"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/green_sqaure"
-        app:layout_constraintHorizontal_chainStyle="packed"
-       />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <View
-        android:id="@+id/green_sqaure"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@android:color/holo_green_light"
-        app:layout_constraintStart_toEndOf="@id/red_square"
-        app:layout_constraintEnd_toStartOf="@id/blue_sqaure"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <View
+            android:id="@+id/red_square"
+            android:layout_width="100dp"
+            android:layout_height="550dp"
+            android:background="#D92222"
+            app:layout_constraintEnd_toStartOf="@id/green_sqaure"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/blue_sqaure"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@android:color/holo_blue_light"
-        app:layout_constraintStart_toEndOf="@id/green_sqaure"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        <View
+            android:id="@+id/green_sqaure"
+            android:layout_width="100dp"
+            android:layout_height="550dp"
+            android:background="@android:color/holo_green_light"
+            app:layout_constraintEnd_toStartOf="@id/blue_sqaure"
+            app:layout_constraintStart_toEndOf="@id/red_square"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/blue_sqaure"
+            android:layout_width="100dp"
+            android:layout_height="550dp"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/green_sqaure"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/red_square2"
+            android:layout_width="100dp"
+            android:layout_height="550dp"
+            android:background="#D92222"
+            app:layout_constraintEnd_toStartOf="@id/green_sqaure2"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/blue_sqaure" />
+
+        <View
+            android:id="@+id/green_sqaure2"
+            android:layout_width="100dp"
+            android:layout_height="550dp"
+            android:background="@android:color/holo_green_light"
+            app:layout_constraintEnd_toStartOf="@id/blue_sqaure2"
+            app:layout_constraintStart_toEndOf="@id/red_square2"
+            app:layout_constraintTop_toBottomOf="@id/blue_sqaure" />
+
+        <View
+            android:id="@+id/blue_sqaure2"
+            android:layout_width="100dp"
+            android:layout_height="550dp"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/green_sqaure2"
+            app:layout_constraintTop_toBottomOf="@id/blue_sqaure" />
+
+        <View
+            android:id="@+id/red_square3"
+            android:layout_width="0dp"
+            android:layout_height="650dp"
+            android:background="#D92222"
+            app:layout_constraintEnd_toStartOf="@id/green_sqaure3"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/blue_sqaure2" />
+
+        <View
+            android:id="@+id/green_sqaure3"
+            android:layout_width="0dp"
+            android:layout_height="650dp"
+            android:background="@android:color/holo_green_light"
+            app:layout_constraintEnd_toStartOf="@id/blue_sqaure3"
+            app:layout_constraintStart_toEndOf="@id/red_square3"
+            app:layout_constraintTop_toBottomOf="@id/blue_sqaure2" />
+
+        <View
+            android:id="@+id/blue_sqaure3"
+            android:layout_width="0dp"
+            android:layout_height="650dp"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/green_sqaure3"
+            app:layout_constraintTop_toBottomOf="@id/blue_sqaure2" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
