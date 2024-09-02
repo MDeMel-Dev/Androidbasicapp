@@ -26,5 +26,8 @@
             android:name="greetingNumber"
             app:argType="integer"
             android:defaultValue="2" />
+        <argument
+            android:name="student"
+            app:argType="com.vu.androidbasicapp.model.Student" />
     </fragment>
 </navigation>

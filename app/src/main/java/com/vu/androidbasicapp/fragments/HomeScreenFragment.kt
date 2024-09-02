@@ -8,6 +8,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.vu.androidbasicapp.R
+import com.vu.androidbasicapp.model.Student
 
 class HomeScreenFragment: Fragment() {
 
@@ -29,7 +30,7 @@ class HomeScreenFragment: Fragment() {
         button = view.findViewById(R.id.button)
 
         button.setOnClickListener {
-            val action = HomeScreenFragmentDirections.actionHomeScreenFragmentToDashboardFragment(greetingText = "hey! I'm the Dashboard screen", greetingNumber = 23)
+            val action = HomeScreenFragmentDirections.actionHomeScreenFragmentToDashboardFragment(greetingText = "hey! I'm the Dashboard screen", greetingNumber = 23, student = Student("John", age = 22))
             findNavController().navigate(action)
         }
     }
