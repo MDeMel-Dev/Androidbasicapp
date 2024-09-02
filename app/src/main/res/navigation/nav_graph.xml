@@ -9,5 +9,14 @@
         android:id="@+id/homeScreenFragment"
         android:name="com.vu.androidbasicapp.fragments.HomeScreenFragment"
         android:label="HomeScreenFragment"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeScreenFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.vu.androidbasicapp.fragments.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
 </navigation>
