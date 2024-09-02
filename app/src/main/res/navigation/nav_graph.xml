@@ -18,5 +18,13 @@
         android:id="@+id/dashboardFragment"
         android:name="com.vu.androidbasicapp.fragments.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <argument
+            android:name="greetingText"
+            app:argType="string" />
+        <argument
+            android:name="greetingNumber"
+            app:argType="integer"
+            android:defaultValue="2" />
+    </fragment>
 </navigation>

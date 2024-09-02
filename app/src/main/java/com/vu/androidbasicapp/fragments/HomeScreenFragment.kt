@@ -29,7 +29,8 @@ class HomeScreenFragment: Fragment() {
         button = view.findViewById(R.id.button)
 
         button.setOnClickListener {
-            findNavController().navigate(R.id.action_homeScreenFragment_to_dashboardFragment)
+            val action = HomeScreenFragmentDirections.actionHomeScreenFragmentToDashboardFragment(greetingText = "hey! I'm the Dashboard screen", greetingNumber = 23)
+            findNavController().navigate(action)
         }
     }
 }
