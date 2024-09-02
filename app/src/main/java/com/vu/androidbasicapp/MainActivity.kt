@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.snackbar.Snackbar
+import com.vu.androidbasicapp.fragments.HomeScreenFragment
 import com.vu.androidbasicapp.model.Student
 
 
@@ -25,6 +26,11 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        supportFragmentManager.beginTransaction()
+            .setReorderingAllowed(true)
+            .add(R.id.fragment_container_view, HomeScreenFragment::class.java, null)
+            .commit()
     }
 
     override fun onStart() {
