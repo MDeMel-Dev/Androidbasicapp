@@ -11,7 +11,6 @@ import com.vu.androidbasicapp.R
 
 
 class DashboardFragment : Fragment() {
-    private val args: DashboardFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,6 +23,6 @@ class DashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<TextView>(R.id.greetingText).text = "student: ${args.student}"
+        view.findViewById<TextView>(R.id.greetingText).text = "Dashboard"
     }
 }
