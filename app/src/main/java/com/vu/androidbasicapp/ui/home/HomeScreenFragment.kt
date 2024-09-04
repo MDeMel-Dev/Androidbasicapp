@@ -37,5 +37,7 @@ class HomeScreenFragment : Fragment() {
 
         view.findViewById<TextView>(R.id.screenTitle).text = viewModel.greetingText.value
         view.findViewById<RecyclerView>(R.id.recyclerView).adapter = adapter
+
+        adapter.setData(listOf("Item: Gumballs", "Item: Lamprais", "Item: Kellogs", "Item: Truffles", "Item: Dragonfruits"))
     }
 }
