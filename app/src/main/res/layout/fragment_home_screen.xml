@@ -17,4 +17,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.116" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/screenTitle"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/basic_viewholder_layout" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
