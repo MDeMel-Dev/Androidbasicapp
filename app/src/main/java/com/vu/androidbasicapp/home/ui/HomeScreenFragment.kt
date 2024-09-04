@@ -34,8 +34,18 @@ class HomeScreenFragment : Fragment() {
 
         lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+
                 viewModel.greetingText.collect { greetingTextState ->
                     view.findViewById<TextView>(R.id.screenTitle).text = greetingTextState
+                }
+            }
+        }
+
+        lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+
+                viewModel.apiResponseObjects.collect { listOfResponseItems ->
+                    recyclerViewAdapter.setData(listOfResponseItems)
                 }
             }
         }
