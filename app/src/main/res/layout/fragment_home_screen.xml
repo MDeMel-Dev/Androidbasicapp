@@ -14,7 +14,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -25,7 +26,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@+id/screenTitle"
         tools:layout_editor_absoluteX="0dp"
-        tools:listitem="@layout/basic_viewholder_layout" />
+        tools:listitem="@layout/item_layout_restful_api_dev" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

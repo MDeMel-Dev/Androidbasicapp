@@ -6,4 +6,5 @@
     <string name="home_screen">Home Screen</string>
     <string name="profile_screen">Profile Screen</string>
     <string name="item">item</string>
+    <string name="show_data">show data</string>
 </resources>

@@ -17,12 +17,7 @@ class HomeScreenViewModel: ViewModel() {
         Log.d("nit3213", "HomeScreenViewModel ViewModel injected ")
 
         viewModelScope.launch {
-            delay(4000)
             val result = restfulDevApiService.getAllObjects()
-            val stringToDisplay = result.map { item ->
-                item.toString() + "\n\n"
-            }
-            updateGreetingTextState(stringToDisplay.toString())
         }
     }
 

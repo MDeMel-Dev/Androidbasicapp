@@ -1,4 +1,4 @@
-package com.vu.androidbasicapp.ui.home.recyclerview
+package com.vu.androidbasicapp.home.recyclerview
 
 import android.view.View
 import android.widget.TextView
