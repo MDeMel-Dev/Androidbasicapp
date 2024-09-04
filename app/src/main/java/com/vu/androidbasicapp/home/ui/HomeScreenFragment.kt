@@ -1,4 +1,4 @@
-package com.vu.androidbasicapp.ui.home
+package com.vu.androidbasicapp.home.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
