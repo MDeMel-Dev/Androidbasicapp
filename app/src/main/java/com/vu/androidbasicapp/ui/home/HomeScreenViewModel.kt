@@ -17,7 +17,11 @@ class HomeScreenViewModel: ViewModel() {
 
         viewModelScope.launch {
             delay(4000)
-            greetingText.value = "Hi the greeting has changed!"
+            updateGreetingTextState("Hi the greeting has changed!")
         }
+    }
+
+    private fun updateGreetingTextState(value: String) {
+        greetingText.value = value
     }
 }
