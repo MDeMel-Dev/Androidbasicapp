@@ -32,10 +32,6 @@ class HomeScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        lifecycleScope.launch {
-            viewModel.greetingText.collect { greetingTextState ->
-                view.findViewById<TextView>(R.id.screenTitle).text = greetingTextState
-            }
-        }
+        view.findViewById<TextView>(R.id.screenTitle).text = viewModel.greetingText.value
     }
 }

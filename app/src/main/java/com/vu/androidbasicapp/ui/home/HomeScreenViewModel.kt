@@ -11,13 +11,4 @@ import kotlinx.coroutines.launch
 class HomeScreenViewModel: ViewModel() {
 
     val greetingText = MutableStateFlow("Hello Class")
-
-    init {
-        Log.d("nit3213", "HomeScreenViewModel ViewModel injected ")
-
-        viewModelScope.launch {
-            delay(4000)
-            greetingText.value = "Hi the greeting has changed!"
-        }
-    }
 }
