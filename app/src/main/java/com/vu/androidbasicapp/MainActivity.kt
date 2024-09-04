@@ -1,49 +1,24 @@
 package com.vu.androidbasicapp
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.snackbar.Snackbar
-import com.vu.androidbasicapp.model.Student
 
-const val DATA_KEY_MODULE_ID = "module-id"
-const val DATA_KEY_STUDENT_DETAILS = "student-details"
+
 class MainActivity : AppCompatActivity() {
-
-val studentDetail = Student("Thomas", 25)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("nit3213", "onCreate: ")
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main_alternative)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main_alternative)) { v, insets ->
+        setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-
-        val nextScreenIntent = Intent(this, SecondScreenActivity::class.java)
-        nextScreenIntent.putExtra(DATA_KEY_MODULE_ID, "nit3213")
-
-        nextScreenIntent.putExtra(DATA_KEY_STUDENT_DETAILS, studentDetail)
-
-        val text: TextView  = findViewById(R.id.textView)
-        val firstButton: Button = findViewById(R.id.button)
-        val secondButton: Button = findViewById(R.id.secondButton)
-
-        firstButton.setOnClickListener {
-            startActivity(nextScreenIntent)
-        }
-
-        secondButton.setOnClickListener {
-            Snackbar.make(it, "You clicked on the second button", Snackbar.LENGTH_LONG).show()
         }
     }
 
