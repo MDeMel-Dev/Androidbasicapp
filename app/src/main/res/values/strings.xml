@@ -5,4 +5,5 @@
     <string name="dashboard_screen">Dashboard Screen</string>
     <string name="home_screen">Home Screen</string>
     <string name="profile_screen">Profile Screen</string>
+    <string name="item">item</string>
 </resources>
