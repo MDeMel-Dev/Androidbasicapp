@@ -9,12 +9,20 @@
         android:id="@+id/homeScreenFragment"
         android:name="com.vu.androidbasicapp.home.ui.HomeScreenFragment"
         android:label="fragment_home_screen"
-        tools:layout="@layout/fragment_home_screen" />
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.vu.androidbasicapp.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <argument
+            android:name="detail"
+            app:argType="com.vu.androidbasicapp.home.data.ResponseItem" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.vu.androidbasicapp.ProfileFragment"

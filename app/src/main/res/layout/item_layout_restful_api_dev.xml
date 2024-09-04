@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    style="?attr/materialCardViewElevatedStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:backgroundTint="#c7ecee">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/itemNametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textColor="#303F9F"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Name" />
+
+        <TextView
+            android:id="@+id/itemIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="#303F9F"
+            app:layout_constraintStart_toStartOf="@id/itemNametext"
+            app:layout_constraintTop_toBottomOf="@id/itemNametext"
+            tools:text="ID: 2" />
+
+        <TextView
+            android:id="@+id/detailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/more_details_are_available"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="#00796B"
+            app:layout_constraintStart_toStartOf="@id/itemIdText"
+            app:layout_constraintTop_toBottomOf="@id/itemIdText"
+            tools:text="More details are available" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/navigationButton"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cornerRadius="8dp"
+            android:backgroundTint="#00BCD4"
+            android:text="@string/show_data"
+            app:layout_constraintBottom_toBottomOf="@id/detailsText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/detailsText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
