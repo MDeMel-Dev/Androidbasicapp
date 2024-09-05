@@ -18,7 +18,11 @@
         android:id="@+id/dashboardFragment"
         android:name="com.vu.androidbasicapp.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <argument
+            android:name="detail"
+            app:argType="com.vu.androidbasicapp.home.data.ResponseItem" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.vu.androidbasicapp.ProfileFragment"
