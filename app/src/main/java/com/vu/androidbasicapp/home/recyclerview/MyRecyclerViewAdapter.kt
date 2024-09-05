@@ -6,11 +6,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.vu.androidbasicapp.R
 import com.vu.androidbasicapp.home.data.ResponseItem
 
-class MyRecyclerViewAdapter(private val dataList: MutableList<ResponseItem> = mutableListOf()) : RecyclerView.Adapter<ResponseItemViewHolder>() {
+class MyRecyclerViewAdapter(private val dataList: MutableList<ResponseItem> = mutableListOf(), private val navigationFunction: () -> Unit) : RecyclerView.Adapter<ResponseItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ResponseItemViewHolder {
         val view = LayoutInflater.from(parent.context) .inflate(R.layout.item_layout_restful_api_dev, parent, false)
-        return ResponseItemViewHolder(view)
+        return ResponseItemViewHolder(view, navigationFunction = navigationFunction)
     }
 
     override fun onBindViewHolder(viewHolder: ResponseItemViewHolder, position: Int) {
