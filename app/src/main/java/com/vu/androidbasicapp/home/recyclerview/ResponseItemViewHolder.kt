@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.vu.androidbasicapp.R
 import com.vu.androidbasicapp.home.data.ResponseItem
 
-class ResponseItemViewHolder(view: View,private val navigationFunction: () -> Unit) : RecyclerView.ViewHolder(view) {
+class ResponseItemViewHolder(view: View,private val navigationFunction: (ResponseItem) -> Unit) : RecyclerView.ViewHolder(view) {
 
     private val name: TextView = view.findViewById(R.id.itemNametext)
     private val id: TextView = view.findViewById(R.id.itemIdText)
@@ -23,7 +23,7 @@ class ResponseItemViewHolder(view: View,private val navigationFunction: () -> Un
 
         if (showDetails == View.VISIBLE) {
             button.setOnClickListener {
-                navigationFunction()
+                navigationFunction(item)
             }
         }
     }

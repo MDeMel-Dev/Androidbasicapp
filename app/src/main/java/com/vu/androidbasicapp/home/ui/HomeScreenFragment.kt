@@ -14,6 +14,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.vu.androidbasicapp.R
+import com.vu.androidbasicapp.home.data.ResponseItem
 import com.vu.androidbasicapp.home.recyclerview.MyRecyclerViewAdapter
 import kotlinx.coroutines.launch
 
@@ -21,7 +22,7 @@ import kotlinx.coroutines.launch
 class HomeScreenFragment : Fragment() {
 
     private val viewModel: HomeScreenViewModel by viewModels()
-    private lateinit var navigationFunctionLambda: () -> Unit
+    private lateinit var navigationFunctionLambda: (ResponseItem) -> Unit
     private lateinit var recyclerViewAdapter: MyRecyclerViewAdapter
 
 
@@ -36,7 +37,7 @@ class HomeScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        navigationFunctionLambda = { findNavController().navigate(HomeScreenFragmentDirections.actionHomeScreenFragmentToDashboardFragment()) }
+        navigationFunctionLambda = { findNavController().navigate(HomeScreenFragmentDirections.actionHomeScreenFragmentToDashboardFragment(detail = it)) }
         recyclerViewAdapter = MyRecyclerViewAdapter(navigationFunction = navigationFunctionLambda)
 
         lifecycleScope.launch {
