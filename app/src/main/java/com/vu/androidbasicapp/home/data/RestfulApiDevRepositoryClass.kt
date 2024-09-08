@@ -1,8 +1,9 @@
 package com.vu.androidbasicapp.home.data
 
 import com.vu.androidbasicapp.home.network.RestfulApiDevRetrofitClient
+import javax.inject.Inject
 
-class RestfulApiDevRepositoryClass {
+class RestfulApiDevRepositoryClass @Inject constructor() {
 
     val restfulDevApiService = RestfulApiDevRetrofitClient().apiService
 
