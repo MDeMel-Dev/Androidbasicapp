@@ -15,9 +15,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.vu.androidbasicapp.R
 import com.vu.androidbasicapp.home.data.ResponseItem
 import com.vu.androidbasicapp.home.ui.recyclerview.MyRecyclerViewAdapter
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 
+@AndroidEntryPoint
 class HomeScreenFragment : Fragment() {
 
     private val viewModel: HomeScreenViewModel by viewModels()
