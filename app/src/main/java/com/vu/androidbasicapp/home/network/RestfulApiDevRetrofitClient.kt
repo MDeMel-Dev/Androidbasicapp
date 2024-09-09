@@ -6,8 +6,9 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import javax.inject.Inject
 
-class RestfulApiDevRetrofitClient {
+class RestfulApiDevRetrofitClient @Inject constructor() {
 
     private val BASE_URL = "https://api.restful-api.dev/"
 

@@ -1,10 +1,9 @@
 package com.vu.androidbasicapp.home.data
 
-import com.vu.androidbasicapp.home.network.RestfulApiDevRetrofitClient
+import com.vu.androidbasicapp.home.network.RestfulApiDevService
+import javax.inject.Inject
 
-class RestfulApiDevRepositoryClass {
-
-    val restfulDevApiService = RestfulApiDevRetrofitClient().apiService
+class RestfulApiDevRepositoryClass @Inject constructor(private val restfulDevApiService: RestfulApiDevService) {
 
     suspend fun getAllObjectsData() = restfulDevApiService.getAllObjects()
 

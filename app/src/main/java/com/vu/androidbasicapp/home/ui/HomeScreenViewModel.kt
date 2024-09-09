@@ -7,14 +7,16 @@ import com.vu.androidbasicapp.home.data.AddObjectRequest
 import com.vu.androidbasicapp.home.data.RestfulApiDevRepositoryClass
 import com.vu.androidbasicapp.home.data.ResponseItem
 import com.vu.androidbasicapp.home.network.RestfulApiDevRetrofitClient
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class HomeScreenViewModel: ViewModel() {
+@HiltViewModel
+class HomeScreenViewModel @Inject constructor(private val repository: RestfulApiDevRepositoryClass): ViewModel() {
 
     val greetingText = MutableStateFlow("Hello Class")
-    val repository = RestfulApiDevRepositoryClass()
     val apiResponseObjects = MutableStateFlow<List<ResponseItem>>(listOf())
 
     init {
