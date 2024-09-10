@@ -40,7 +40,8 @@ class CalculatorTest {
         // When
         val result = calculator.subtract(a, b)
 
-        // Then assertEquals(6, result)
+        // Then
+        assertEquals(6, result)
 
         // Verify the result is correct
         verify { mockLogger.log("Subtracting 10 and 4: 6") } // Verify the log message
