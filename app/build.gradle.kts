@@ -63,6 +63,8 @@ dependencies {
     testImplementation("io.mockk:mockk-android:1.13.12")
     testImplementation("io.mockk:mockk-agent:1.13.12")
     testImplementation(libs.junit)
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1")
+
     androidTestImplementation("io.mockk:mockk-android:1.13.12")
     androidTestImplementation("io.mockk:mockk-agent:1.13.12")
     androidTestImplementation(libs.androidx.junit)
