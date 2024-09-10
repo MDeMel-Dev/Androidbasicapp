@@ -57,10 +57,14 @@ dependencies {
     // Hilt dependancies
     implementation("com.google.dagger:hilt-android:2.51.1")
     kapt("com.google.dagger:hilt-android-compiler:2.51.1")
-    
+
     // Testing dependancies
-    testImplementation("io.mockk:mockk:1.13.0")
+    testImplementation("io.mockk:mockk:1.13.12")
+    testImplementation("io.mockk:mockk-android:1.13.12")
+    testImplementation("io.mockk:mockk-agent:1.13.12")
     testImplementation(libs.junit)
+    androidTestImplementation("io.mockk:mockk-android:1.13.12")
+    androidTestImplementation("io.mockk:mockk-agent:1.13.12")
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
