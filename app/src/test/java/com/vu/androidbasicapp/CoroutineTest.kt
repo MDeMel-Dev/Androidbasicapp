@@ -40,7 +40,7 @@ class CoroutineTest {
             result = "Hello "
         } // although this coroutine executes eagerly, the completion of the coroutine is not guaranteed
 
-        advanceUntilIdle() // make sure all coroutines are executed before making any test verifications.
+        advanceUntilIdle() // make sure previous coroutine has finished execution
 
         launch { result += "world" }
 
