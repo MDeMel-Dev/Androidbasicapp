@@ -16,7 +16,7 @@ class MyRecyclerViewAdapterTest {
         val exampleResponseItem = ResponseItem(id = "1", objectName = "sdfhvsdjh", dataSection = mapOf("key1" to "value"))
         val data = listOf(exampleResponseItem, exampleResponseItem.copy(id = "2"), exampleResponseItem.copy(id = "3"))
         val adapter = spyk(MyRecyclerViewAdapter(navigationFunction = {}))
-
+        every { adapter.notifyDataSetChanged() } returns Unit
 
 
         adapter.setData(data)
