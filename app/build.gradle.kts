@@ -48,7 +48,6 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Retrofit dependancies
@@ -60,6 +59,18 @@ dependencies {
     // Hilt dependancies
     implementation("com.google.dagger:hilt-android:2.51.1")
     kapt("com.google.dagger:hilt-android-compiler:2.51.1")
+
+    // Test dependancies
+    // Local unit test dependencies (run on the JVM)
+    testImplementation("io.mockk:mockk:1.13.12") // Core MockK library for local unit tests
+    testImplementation("io.mockk:mockk-android:1.13.12") // Android-specific MockK for local unit tests
+    testImplementation("io.mockk:mockk-agent:1.13.12") // MockK agent for advanced mocking (e.g., static methods)
+    androidTestImplementation(libs.androidx.junit) // JUnit for local unit tests
+
+    // Instrumented test dependencies (run on an Android device or emulator) androidTestImplementation("io.mockk:mockk-android:1.13.12") // Android-specific MockK for instrumented tests
+    androidTestImplementation("io.mockk:mockk-agent:1.13.12") // MockK agent for advanced mocking in instrumented tests
+    androidTestImplementation("androidx.test.ext:junit:1.1.3") // AndroidX JUnit for instrumented tests
+
 }
 
 // Allow references to generated code
