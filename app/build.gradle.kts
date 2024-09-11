@@ -71,6 +71,7 @@ dependencies {
     androidTestImplementation("io.mockk:mockk-agent:1.13.12") // MockK agent for advanced mocking in instrumented tests
     androidTestImplementation("androidx.test.ext:junit:1.1.3") // AndroidX JUnit for instrumented tests
 
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1")
 }
 
 // Allow references to generated code
