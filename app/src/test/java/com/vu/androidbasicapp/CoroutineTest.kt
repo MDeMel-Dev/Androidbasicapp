@@ -39,9 +39,10 @@ class CoroutineTest {
             delay(2000)
             result = "Hello "
         } // although this coroutine executes eagerly, the completion of the coroutine is not guaranteed
-        launch { result += "world" }
 
         advanceUntilIdle() // make sure all coroutines are executed before making any test verifications.
+
+        launch { result += "world" }
 
         assertEquals ("Hello world", result)
     }
